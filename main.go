@@ -174,7 +174,7 @@ func insertData(db *sql.DB, songs []Song) {
 }
 
 // get all data in database
-func getData(db *sql.DB) []Song {
+func findAll(db *sql.DB) []Song {
 	rows, err := db.Query("SELECT * FROM songs")
 	if err != nil {
 		fmt.Println(err)
